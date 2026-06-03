@@ -1,7 +1,7 @@
 # Data and Models (DO NOT COMMIT)
 data/raw/*
 data/processed/*
-models/
+/models/
 
 # Virtual Environments
 venv/
