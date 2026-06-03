@@ -79,5 +79,22 @@ class AmazonDataAnalyzer:
     def user_behaviour_analysis(self)->None:
         if self.df is None: return
         
+        user_counts = self.df['reviewerID'].value_counts()
+        logger.info(f"Total Unique Users: {len(user_counts)}")
+        logger.info(f"Average reviews per user: {user_counts.mean():.2f}")
+        logger.info(f"Median reviews per user: {user_counts.median():.2f}")
+        
+        # Plot Power Law / Long Tail
+        plt.figure(figsize=(10, 5))
+        sns.histplot(user_counts[user_counts < 50], bins=50, kde=False)
+        plt.title('User Review Frequency (The Long Tail)', fontsize=14)
+        plt.xlabel('Number of Reviews Written', fontsize=12)
+        plt.ylabel('Number of Users', fontsize=12)
+        plt.yscale('log') # Log scale is crucial for e-commerce
+        plt.show()
+        
+    if __name__ == "__main__":
+        pass    
+        
         
               
