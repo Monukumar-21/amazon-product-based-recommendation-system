@@ -1,4 +1,17 @@
-/data
-/artifacts
-/configs
-/tests
+# Data and Models (DO NOT COMMIT)
+data/raw/*
+data/processed/*
+models/
+
+# Virtual Environments
+venv/
+env/
+.env
+
+# Python Caches
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# OS Files
+.DS_Store
