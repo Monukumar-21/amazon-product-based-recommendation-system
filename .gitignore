@@ -1,6 +1,5 @@
 # Data and Models (DO NOT COMMIT)
-data/raw/*
-data/processed/*
+/data/
 /models/
 
 # Virtual Environments
